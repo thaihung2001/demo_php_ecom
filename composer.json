@@ -1,4 +1,15 @@
 {
-    "name": "your-app-name",
+    "name": "thaihung2001/php_ecom",
+    "autoload": {
+        "psr-4": {
+            "Thaihung2001\\PhpEcom\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Thai",
+            "email": "lydangthaihung@gmail.com"
+        }
+    ],
     "require": {}
 }
