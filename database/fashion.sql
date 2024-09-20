@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 09, 2023 at 07:32 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th9 20, 2024 lúc 10:20 AM
+-- Phiên bản máy phục vụ: 10.4.27-MariaDB
+-- Phiên bản PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `fashion`
+-- Cơ sở dữ liệu: `fashion`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_cart`
+-- Cấu trúc bảng cho bảng `tbl_cart`
 --
 
 CREATE TABLE `tbl_cart` (
@@ -39,7 +39,7 @@ CREATE TABLE `tbl_cart` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `tbl_cart`
+-- Đang đổ dữ liệu cho bảng `tbl_cart`
 --
 
 INSERT INTO `tbl_cart` (`id`, `id_order`, `id_pro`, `quantity`, `prices`, `size`, `name_pro`, `img_pro`) VALUES
@@ -52,7 +52,7 @@ INSERT INTO `tbl_cart` (`id`, `id_order`, `id_pro`, `quantity`, `prices`, `size`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_catalog`
+-- Cấu trúc bảng cho bảng `tbl_catalog`
 --
 
 CREATE TABLE `tbl_catalog` (
@@ -63,7 +63,7 @@ CREATE TABLE `tbl_catalog` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `tbl_catalog`
+-- Đang đổ dữ liệu cho bảng `tbl_catalog`
 --
 
 INSERT INTO `tbl_catalog` (`id_catalog_k`, `catalog_name`, `prioritize`, `display_ctl`) VALUES
@@ -74,7 +74,7 @@ INSERT INTO `tbl_catalog` (`id_catalog_k`, `catalog_name`, `prioritize`, `displa
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_client`
+-- Cấu trúc bảng cho bảng `tbl_client`
 --
 
 CREATE TABLE `tbl_client` (
@@ -91,18 +91,18 @@ CREATE TABLE `tbl_client` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `tbl_client`
+-- Đang đổ dữ liệu cho bảng `tbl_client`
 --
 
 INSERT INTO `tbl_client` (`id`, `fname`, `lname`, `sex`, `address`, `email`, `phone`, `user`, `password`, `ban`) VALUES
-(32, 'Thuong', 'Nguyen', 2, 'KTX KHU A', '2052000@gm.uit.edu.vn', '0342888525', 'nhatthuong1234', '123', 0),
-(39, 'Thuong', 'Nguyen', 1, '1', '2002@gmail.com', '0342888525', 'adminthuong', '123123', 1),
-(40, 'Thuong', 'Nguyen', 2, '1', '2002@gmail.com', '+84342888525', 'adminthuong42342', '123123', 1);
+(32, 'Cuong', 'Nguyen', 2, 'KTX NAM', 'cuong@gmail.com', '0342888525', 'usercuong', '123', 0),
+(39, 'Teo', 'Nguyen', 1, 'KTX', 'teo@gmail.com', '0342999626', 'userteo', '123123', 0),
+(40, 'Lam', 'Nguyen', 2, 'KTX', 'lam@gmail.com', '+84342888525', 'userlam', '123123', 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_order`
+-- Cấu trúc bảng cho bảng `tbl_order`
 --
 
 CREATE TABLE `tbl_order` (
@@ -123,7 +123,7 @@ CREATE TABLE `tbl_order` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `tbl_order`
+-- Đang đổ dữ liệu cho bảng `tbl_order`
 --
 
 INSERT INTO `tbl_order` (`id`, `invoice_id`, `total_prices`, `payment`, `id_user`, `fname`, `lname`, `phone`, `email`, `address`, `notes`, `due_date`, `status`, `employee_pr`) VALUES
@@ -136,7 +136,7 @@ INSERT INTO `tbl_order` (`id`, `invoice_id`, `total_prices`, `payment`, `id_user
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_product`
+-- Cấu trúc bảng cho bảng `tbl_product`
 --
 
 CREATE TABLE `tbl_product` (
@@ -157,7 +157,7 @@ CREATE TABLE `tbl_product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `tbl_product`
+-- Đang đổ dữ liệu cho bảng `tbl_product`
 --
 
 INSERT INTO `tbl_product` (`id_product`, `product_name`, `quantity`, `product_img`, `product_prices`, `catalog_id`, `employee_entry`, `entry_date`, `sup_id`, `view`, `special`, `old_prices`, `description`, `size`) VALUES
@@ -173,7 +173,7 @@ INSERT INTO `tbl_product` (`id_product`, `product_name`, `quantity`, `product_im
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_supplier`
+-- Cấu trúc bảng cho bảng `tbl_supplier`
 --
 
 CREATE TABLE `tbl_supplier` (
@@ -185,7 +185,7 @@ CREATE TABLE `tbl_supplier` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `tbl_supplier`
+-- Đang đổ dữ liệu cho bảng `tbl_supplier`
 --
 
 INSERT INTO `tbl_supplier` (`sup_id`, `sup_name`, `sup_address`, `sup_bank`, `sup_tax_code`) VALUES
@@ -195,7 +195,7 @@ INSERT INTO `tbl_supplier` (`sup_id`, `sup_name`, `sup_address`, `sup_bank`, `su
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_user`
+-- Cấu trúc bảng cho bảng `tbl_user`
 --
 
 CREATE TABLE `tbl_user` (
@@ -209,21 +209,21 @@ CREATE TABLE `tbl_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `tbl_user`
+-- Đang đổ dữ liệu cho bảng `tbl_user`
 --
 
 INSERT INTO `tbl_user` (`id`, `name_us`, `address_us`, `email`, `user`, `password_us`, `role_us`) VALUES
-(1, 'Thưởng', 'KTXkhuA', '20522000@gm.uit.edu.vn', 'adminthuong', '123123', 1),
-(2, 'Hương', 'Bình Dương', '20521381@gm.uit.edu.vn', 'adminhuong', '123123', 1),
+(1, 'Cuong', 'KTX NAM', 'cuong@gmal.com', 'admincuong', '123123', 1),
+(2, 'Admin', 'Bình Dương', 'admin@gmail.com', 'adminadmin', '123123', 1),
 (9, 'Hoà', 'ktxkhuA', '20521331@gmail.com', 'adminhoa', '123123', 1),
 (10, 'Lâm', 'Củ Chi', '20521515@gm.uit.edu.vn', 'adminlam', '123123', 1);
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `tbl_cart`
+-- Chỉ mục cho bảng `tbl_cart`
 --
 ALTER TABLE `tbl_cart`
   ADD PRIMARY KEY (`id`),
@@ -231,19 +231,19 @@ ALTER TABLE `tbl_cart`
   ADD KEY `FK_product` (`id_pro`);
 
 --
--- Indexes for table `tbl_catalog`
+-- Chỉ mục cho bảng `tbl_catalog`
 --
 ALTER TABLE `tbl_catalog`
   ADD PRIMARY KEY (`id_catalog_k`);
 
 --
--- Indexes for table `tbl_client`
+-- Chỉ mục cho bảng `tbl_client`
 --
 ALTER TABLE `tbl_client`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_order`
+-- Chỉ mục cho bảng `tbl_order`
 --
 ALTER TABLE `tbl_order`
   ADD PRIMARY KEY (`id`),
@@ -251,7 +251,7 @@ ALTER TABLE `tbl_order`
   ADD KEY `FK_client_check` (`id_user`);
 
 --
--- Indexes for table `tbl_product`
+-- Chỉ mục cho bảng `tbl_product`
 --
 ALTER TABLE `tbl_product`
   ADD PRIMARY KEY (`id_product`),
@@ -260,83 +260,83 @@ ALTER TABLE `tbl_product`
   ADD KEY `fk_supplier` (`sup_id`);
 
 --
--- Indexes for table `tbl_supplier`
+-- Chỉ mục cho bảng `tbl_supplier`
 --
 ALTER TABLE `tbl_supplier`
   ADD PRIMARY KEY (`sup_id`);
 
 --
--- Indexes for table `tbl_user`
+-- Chỉ mục cho bảng `tbl_user`
 --
 ALTER TABLE `tbl_user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `tbl_cart`
+-- AUTO_INCREMENT cho bảng `tbl_cart`
 --
 ALTER TABLE `tbl_cart`
   MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=207;
 
 --
--- AUTO_INCREMENT for table `tbl_catalog`
+-- AUTO_INCREMENT cho bảng `tbl_catalog`
 --
 ALTER TABLE `tbl_catalog`
   MODIFY `id_catalog_k` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
--- AUTO_INCREMENT for table `tbl_client`
+-- AUTO_INCREMENT cho bảng `tbl_client`
 --
 ALTER TABLE `tbl_client`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
--- AUTO_INCREMENT for table `tbl_order`
+-- AUTO_INCREMENT cho bảng `tbl_order`
 --
 ALTER TABLE `tbl_order`
   MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=146;
 
 --
--- AUTO_INCREMENT for table `tbl_product`
+-- AUTO_INCREMENT cho bảng `tbl_product`
 --
 ALTER TABLE `tbl_product`
   MODIFY `id_product` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 
 --
--- AUTO_INCREMENT for table `tbl_supplier`
+-- AUTO_INCREMENT cho bảng `tbl_supplier`
 --
 ALTER TABLE `tbl_supplier`
   MODIFY `sup_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
--- AUTO_INCREMENT for table `tbl_user`
+-- AUTO_INCREMENT cho bảng `tbl_user`
 --
 ALTER TABLE `tbl_user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `tbl_cart`
+-- Các ràng buộc cho bảng `tbl_cart`
 --
 ALTER TABLE `tbl_cart`
   ADD CONSTRAINT `FK_order` FOREIGN KEY (`id_order`) REFERENCES `tbl_order` (`id`),
   ADD CONSTRAINT `FK_product` FOREIGN KEY (`id_pro`) REFERENCES `tbl_product` (`id_product`);
 
 --
--- Constraints for table `tbl_order`
+-- Các ràng buộc cho bảng `tbl_order`
 --
 ALTER TABLE `tbl_order`
-  ADD CONSTRAINT `FK_client_check` FOREIGN KEY (`id_user`) REFERENCES `tbl_client` (`ID`),
+  ADD CONSTRAINT `FK_client_check` FOREIGN KEY (`id_user`) REFERENCES `tbl_client` (`id`),
   ADD CONSTRAINT `FK_employee` FOREIGN KEY (`employee_pr`) REFERENCES `tbl_user` (`id`);
 
 --
--- Constraints for table `tbl_product`
+-- Các ràng buộc cho bảng `tbl_product`
 --
 ALTER TABLE `tbl_product`
   ADD CONSTRAINT `fk_employee_entry` FOREIGN KEY (`employee_entry`) REFERENCES `tbl_user` (`id`),
