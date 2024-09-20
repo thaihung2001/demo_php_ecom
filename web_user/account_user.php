@@ -59,9 +59,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             <nav class="axil-dashboard-nav">
                                 <div class="nav nav-tabs" role="tablist">
                                     <a class="nav-item nav-link   active" data-bs-toggle="tab" href="#nav-account"
-                                        role="tab" aria-selected="false"><i class="fas fa-user"></i>Account Details</a>
+                                        role="tab" aria-selected="false"><i class="fas fa-user"></i>Thông tin tài khoản</a>
                                     <a class="nav-item nav-link" data-bs-toggle="tab" href="#nav-orders" role="tab"
-                                        aria-selected="false"><i class="fas fa-shopping-basket"></i>Orders</a>
+                                        aria-selected="false"><i class="fas fa-shopping-basket"></i>Đơn đặt hàng</a>
                                 </div>
                             </nav>
                         </aside>
@@ -74,11 +74,11 @@ document.addEventListener('DOMContentLoaded', function() {
                                         <table class="table">
                                             <thead>
                                                 <tr>
-                                                    <th scope="col">Order</th>
-                                                    <th scope="col">Date</th>
-                                                    <th scope="col">Status</th>
-                                                    <th scope="col">Total</th>
-                                                    <th scope="col">Actions</th>
+                                                    <th scope="col">Đơn hàng</th>
+                                                    <th scope="col">Thời gian</th>
+                                                    <th scope="col">Trạng thái</th>
+                                                    <th scope="col">Tổng</th>
+                                                    <th scope="col"></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -134,45 +134,45 @@ document.addEventListener('DOMContentLoaded', function() {
                                                             <div class="row">
                                                                 <div class="col-lg-6">
                                                                     <div class="form-group">
-                                                                        <label>First Name</label>
+                                                                        <label>Tên</label>
                                                                         <input  style="background-color: white;" type="text" readonly class="form-control" value="'.$client['fname'].'">
                                                                     </div>
                                                                 </div>
                                                             <div class="col-lg-6">
                                                                 <div class="form-group">
-                                                                    <label>Last Name</label>
+                                                                    <label>Họ đệm</label>
                                                                     <input style="background-color: white;"type="text" readonly class="form-control" value="'.$client['lname'].'">
                                                                 </div>
                                                             </div>
                                                             </div>
                                                             <div class="axil-dashboard-address">
-                                                            <p class="notice-text">The following addresses will be used on the checkout page by default.</p>
+                                                            <p class="notice-text">Các địa chỉ sau sẽ được sử dụng trên trang thanh toán theo mặc định.</p>
                                                             <div class="row row--30">
                                                                 <div class="col-lg-6">
                                                                     <div class="address-info mb--40">
                                                                         <div class="addrss-header d-flex align-items-center justify-content-between">
-                                                                            <h4 class="title mb-0">Information</h4>
+                                                                            <h4 class="title mb-0">Thông tin</h4>
                                                                             <a href="#" class="address-edit"><i class="far fa-edit"></i></a>
                                                                         </div>
                                                                         <ul class="address-details">
-                                                                            <li>First Name: '.$client['fname'].'</li>
+                                                                            <li>Tên: '.$client['fname'].'</li>
                                                                             <li>Email: '.$client['email'].'</li>
-                                                                            <li>Phone: '.$client['phone'].'</li>
-                                                                            <li>Address: '.$client['address'].'</li>
+                                                                            <li>Điện thoại: '.$client['phone'].'</li>
+                                                                            <li>Địa chỉ: '.$client['address'].'</li>
                                                                         </ul>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6">
                                                                     <div class="address-info">
                                                                         <div class="addrss-header d-flex align-items-center justify-content-between">
-                                                                            <h4 class="title mb-0">Billing Address Format</h4>
+                                                                            <h4 class="title mb-0">Địa chỉ thanh toán</h4>
                                                                             <a href="#" class="address-edit"><i class="far fa-edit"></i></a>
                                                                         </div>
                                                                         <ul class="address-details">
-                                                                            <li>First Name: '.$client['fname'].'</li>
+                                                                            <li>Tên: '.$client['fname'].'</li>
                                                                             <li>Email: '.$client['email'].'</li>
-                                                                            <li>Phone: '.$client['phone'].'</li>
-                                                                            <li>Address: '.$client['address'].'</li>
+                                                                            <li>Điện thoại: '.$client['phone'].'</li>
+                                                                            <li>Địa chỉ: '.$client['address'].'</li>
                                                                         </ul>
                                                                     </div>
                                                                 </div>

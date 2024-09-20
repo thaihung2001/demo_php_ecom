@@ -19,7 +19,7 @@ $catalog_use = getall_catalog_user();
 include 'header.php';
 if (isset($_GET['act'])) {
   switch ($_GET['act']) {
-    // login page
+      // login page
     case 'login': {
         header('location: login_user.php');
         break;
@@ -28,7 +28,7 @@ if (isset($_GET['act'])) {
         header('location: login_user.php?success=1');
         break;
       }
-    // logout
+      // logout
     case 'logout': {
         if (isset($_SESSION['username'])) {
           unset($_SESSION['username']);
@@ -45,7 +45,7 @@ if (isset($_GET['act'])) {
         header('location: fashionApp.php?act=home');
         break;
       }
-    // login have session user
+      // login have session user
     case 'login_account_user': {
         if (isset($_POST['user_check']) && ($_POST['user_check'])) {
           $user = $_POST['user'];
@@ -59,8 +59,7 @@ if (isset($_GET['act'])) {
           if ($kq_ban == 0) {
             header('location: login_user.php?error=2');
             exit();
-          }
-          elseif ($kq_user == 0) {
+          } elseif ($kq_user == 0) {
             header('location: login_user.php?error=1');
             exit();
           } else {
@@ -72,19 +71,19 @@ if (isset($_GET['act'])) {
         }
         break;
       }
-    // show more info
+      // show more info
     case 'account_user': {
         $client = getall_client_user();
         $order = getall_order();
         include 'account_user.php';
         break;
       }
-    // about team
+      // about team
     case 'about': {
         include 'about.php';
         break;
       }
-    // show more product catalog
+      // show more product catalog
     case 'product_catalog_user': {
         if (isset($_GET['id']) && ($_GET['id'] > 0)) {
           $iddm = $_GET['id'];
@@ -95,7 +94,7 @@ if (isset($_GET['act'])) {
         include("product_catalog.php");
         break;
       }
-    // home of body
+      // home of body
     case 'home': {
         include 'body.php';
         break;
@@ -244,7 +243,7 @@ if (isset($_GET['act'])) {
         }
         break;
       }
-    // insert account client user
+      // insert account client user
     case 'insert_client_user': {
         if (isset($_GET['id'])) {
           header('location: register.php');
@@ -306,4 +305,3 @@ if (isset($_GET['act'])) {
   include 'body.php';
 }
 include 'footer.php';
-?>

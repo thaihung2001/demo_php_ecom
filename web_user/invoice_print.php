@@ -176,9 +176,9 @@
     <div class='invoice-company'>
       <h2 class='invoice-company-name'>KINGSMAN</h2>
       <p class='invoice-company-address'>
-        <span>Hang Thuyen Street,</span>
-        <span>Neighborhood 6 P, Thu Duc City - HCM, VietNam</span>
-        <span>group5@gm.uit.edu.vn</span>
+        <span>12 Nguyen Van Bao Street, Ward 6</span>
+        <span>Go Vap District, HCM City, VietNam</span>
+        <span>nvc196011@gmail.com</span>
       </p>
     </div>
   </div>
@@ -229,10 +229,10 @@
   </div>
   <table class='invoice-table'>
     <tr>
-      <th>Name Product</th>
-      <th>Quantity</th>
-      <th>Price</th>
-      <th>Amount</th>
+      <th>Tên sản phẩm</th>
+      <th>Số lượng</th>
+      <th>Đơn giá</th>
+      <th>Tổng tiền</th>
     </tr>
     <?php
         $total = 0;
@@ -269,7 +269,7 @@
       </div>
   <div class="button-wrapper">
     <ion-icon name="print-outline" class="invoice-print"></ion-icon>
-    <button class="custom-button"><a href="fashionApp.php" class="axil-btn btn-bg-primary checkout-btn">Home Page</a></button>
+    <button class="custom-button"><a href="fashionApp.php" class="axil-btn btn-bg-primary checkout-btn">Trang chủ</a></button>
 </div>
 </main>
 
