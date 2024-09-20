@@ -117,7 +117,7 @@ CREATE TABLE `tbl_order` (
   `email` varchar(50) NOT NULL,
   `address` varchar(255) NOT NULL,
   `notes` varchar(255) NOT NULL DEFAULT 'Not note',
-  `due_date` date NOT NULL DEFAULT current_timestamp(),
+  `due_date` date NOT NULL,
   `status` varchar(20) NOT NULL DEFAULT 'Pending',
   `employee_pr` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
@@ -147,7 +147,7 @@ CREATE TABLE `tbl_product` (
   `product_prices` int(10) NOT NULL DEFAULT 0,
   `catalog_id` int(4) NOT NULL,
   `employee_entry` int(11) NOT NULL,
-  `entry_date` date NOT NULL DEFAULT current_timestamp(),
+  `entry_date` date NOT NULL,
   `sup_id` int(11) NOT NULL,
   `view` tinyint(4) NOT NULL DEFAULT 0,
   `special` tinyint(4) NOT NULL DEFAULT 0,
