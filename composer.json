@@ -2,7 +2,7 @@
     "name": "thaihung2001/php_ecom",
     "autoload": {
         "psr-4": {
-            "Thaihung2001\\PhpEcom\\": "src/"
+            "Thaihung2001\\PhpEcom\\": "web_user/login_user"
         }
     },
     "authors": [
